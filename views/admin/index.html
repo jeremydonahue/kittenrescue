@@ -1,0 +1,39 @@
+{{extend 'layout.html'}}
+
+<div id="volunteer-list">
+<input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+  <table>
+  <tbody class="list">
+	<tr>
+  <th>Name</th>
+	<th>Email</th>
+	<th>Orientation</th>
+	</tr>
+  {{for user in user_info:}}
+  <tr>
+    <td class="name">
+    {{=user.first_name}} {{=user.last_name}}
+    </td>
+    <td class="email">
+    {{=user.email}}
+    </td>
+    <td class="phone">
+    {{=user.phone}}
+    </td>
+    <td class="zip">
+    {{=user.zip}}
+    </td>
+    <td class="skills">
+    {{=user.skills}}
+    </td>
+    <td class='orientation'>
+    Attended orientation: {{if user.orientation_attended:}}Yes{{else:}}No{{pass}}
+    </td>
+  </tr>
+{{pass}}
+</tbody>
+</table>
+</div>

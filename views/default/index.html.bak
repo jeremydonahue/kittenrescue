@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+
+<center>
+<img src="/kittenrescue/static/images/kittenrescue.jpg">
+
+<h1>
+    Welcome to Kitten Rescue!
+</h1>
+
+They may have four paws, but they can always use a helping hand! Kitten Rescue operates solely on the time, energy, and dedication of our volunteers. There are many ways you can get involved! Even if you only have an hour a week to help out, that's ok, we always are happy to have the help.
+<br>
+We're so glad you found us, please <a href="/kittenrescue/default/user/login?_next=/kittenrescue/default/index">log in</a> or <a href="/kittenrescue/default/user/register?_next=%2Fkittenrescue%2Fdefault%2Findex">sign up</a> to continue.
+
+</center>

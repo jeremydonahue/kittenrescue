@@ -1,0 +1,43 @@
+{{extend 'layout.html'}}
+
+<center>
+	<div id='icon'>
+		<img src="/kittenrescue/static/images/kittenrescue.jpg">
+	</div>
+</center>
+{{if auth.is_logged_in():}}
+<center>
+<h1>
+	Welcome back, {{=auth.user.first_name}}!
+</h1>
+</center>
+<div id='container'>
+<hr />
+<div id='default-instructions'>
+<h2 id='default-instructions-header'>
+	Instructions
+</h2>
+<hr />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut porta sapien. Vivamus faucibus, justo et sagittis interdum, dui tellus interdum massa, a dapibus sem massa eu ligula. Nullam congue mi nisl, sed aliquet odio pellentesque quis. Suspendisse hendrerit cursus libero a efficitur.
+</div>
+<div id='calendar'></div>
+</div>
+
+{{else:}}
+<center>
+<h1>
+Welcome to Kitten Rescue!
+</h1>
+
+<div id=intro>
+They may have four paws, but they can always use a helping hand! Kitten Rescue operates solely on the time, energy, and dedication of our volunteers. There are many ways you can get involved! Even if you only have an hour a week to help out, that's ok, we always are happy to have the help.
+<br>
+<br>
+We're so glad you found us, please login or register to volunteer with Kitten Rescue Santuary, Los Angeles.
+<br>
+<br>
+<a class="loginbtn" id="register" href="/kittenrescue/default/user/register?_next=%2Fkittenrescue%2Fdefault%2Findex">Register</a> 
+<a class="loginbtn" href="/kittenrescue/default/user/login?_next=/kittenrescue/default/index">Log in</a> 
+</div>
+</center>
+{{pass}}

@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+
+<img src="/kittenrescue/static/images/kittenrescue.jpg">
+
+<h1>
+    Welcome to Kitten Rescue!
+</h1>
+
+<h1>
+    {{=message}}
+</h1>
